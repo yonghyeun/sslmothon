@@ -39,9 +39,7 @@ const App = (props: AppProps) => {
     )
   );
 
-  // 오차 범위 계산 (5% 오차 허용)
-  const tolerance = Math.max(5, Math.floor(actualArgs.height * 0.02));
-  const isCorrect = Math.abs(z - answer) <= tolerance;
+  const isCorrect = z === answer; // 정답 여부
 
   // 게임 시작 시 타이머 시작
   useEffect(() => {
