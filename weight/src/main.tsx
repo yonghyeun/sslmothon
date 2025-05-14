@@ -6,7 +6,7 @@ import App from "./App.tsx";
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <App
-      height={500}
+      height={800}
       radiusLeft={30 + Math.random() * 100}
       radiusRight={200 + Math.random() * 100}
     />

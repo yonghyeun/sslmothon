@@ -78,7 +78,7 @@ const App: React.FC<AppProps> = ({ ...args }) => {
                 status === "success"
                   ? "none"
                   : `rotateZ(${(answer - z) / 5}deg)`,
-              transition: "transform 1s",
+              transition: "transform 3s",
             }}
           />
         </div>

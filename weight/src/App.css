@@ -30,12 +30,12 @@ main > div {
 }
 
 .game-container {
-  background-color: white;
+  background-color: #ffffff;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   padding: 24px;
-  max-width: 800px;
-  width: 100%;
+  width: fit-content;
+  padding: 1rem;
 }
 
 h1 {
@@ -60,7 +60,6 @@ h1 {
   align-items: center;
   margin: 1.5rem 0;
   padding: 20px 0;
-  background-color: #f9f9f9;
   border-radius: 8px;
 }
 
