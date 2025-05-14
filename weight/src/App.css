@@ -1,0 +1,194 @@
+main {
+  height: 100lvh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Noto Sans KR", -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  background: url(https://i.namu.wiki/i/yre-pgAZRkpn69VsfXp4f1ZuuXwr45Bv4NDRFp_aH_7QMRYzlY3BGDloA3OI-Zk6vrowM-ca3o7HxF6JaqiFVR64KzP-L_0I4qD92s0pC5DSeS9nQHM6Z-xUW8DrB47sNsa7telO6JikWuju3gZb4A.webp);
+}
+
+main > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.button-wrapper > input {
+  width: 100%;
+}
+
+.game-container {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 24px;
+  max-width: 800px;
+  width: 100%;
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+}
+
+.instruction {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 1.5rem;
+}
+
+.truncated-cone-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem 0;
+  padding: 20px 0;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+}
+
+.truncatedcone {
+  display: block;
+  margin: 0 auto;
+}
+
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+  position: relative;
+}
+
+.controls-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  cursor: pointer;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.start-button {
+  background-color: #4dabf7;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 24px;
+  margin: 0 auto;
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.start-button:hover {
+  background-color: #339af0;
+}
+
+.adjust-button {
+  background-color: #e9ecef;
+  color: #495057;
+  flex: 1;
+  min-width: 120px;
+}
+
+.adjust-button:hover {
+  background-color: #dee2e6;
+}
+
+.adjust-button.left {
+  border-left: 4px solid #4dabf7;
+}
+
+.adjust-button.right {
+  border-right: 4px solid #4dabf7;
+}
+
+.adjust-button.small {
+  font-size: 0.85rem;
+  padding: 8px 12px;
+}
+
+.check-button {
+  background-color: #40c057;
+  color: white;
+  margin-top: 8px;
+  width: 100%;
+  padding: 12px;
+}
+
+.check-button:hover {
+  background-color: #37b24d;
+}
+
+.restart-button {
+  background-color: #4dabf7;
+  color: white;
+  padding: 12px 24px;
+  margin: 1rem auto 0;
+  display: block;
+}
+
+.restart-button:hover {
+  background-color: #339af0;
+}
+
+.result-container {
+  background-color: #f1f3f5;
+  border-radius: 8px;
+  padding: 16px;
+  text-align: center;
+}
+
+.result-info {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 1rem;
+}
+
+.balance-indicator {
+  width: 80%;
+  margin: 1rem auto;
+  text-align: center;
+}
+
+.balance-bar {
+  height: 8px;
+  width: 100%;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  position: relative;
+  overflow: hidden;
+}
+
+.balance-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
