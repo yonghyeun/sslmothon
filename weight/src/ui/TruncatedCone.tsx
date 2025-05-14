@@ -52,39 +52,39 @@ export const TruncatedCone: React.FC<TruncatedConeProps> = ({
       className="truncatedcone"
       {...props}
     >
-      {/* Left Ellipse */}
+      {/* 왼쪽 타원 */}
       <ellipse
         cx={leftEllipseCx}
         cy={commonCy}
         rx={rLeftX}
         ry={rLeftY}
-        fill="#eee" // Assuming left is analogous to 'top' from vertical orientation
-        stroke="#888"
-        strokeWidth="1"
+        fill="#FFCCCC" // 더 밝고 강한 색상
+        stroke="black" // 더 두껍고 뚜렷한 테두리
+        strokeWidth="2"
       />
-      {/* Right Ellipse */}
+      {/* 오른쪽 타원 */}
       <ellipse
         cx={rightEllipseCx}
         cy={commonCy}
         rx={rRightX}
         ry={rRightY}
-        fill="#ccc" // Assuming right is analogous to 'bottom' from vertical orientation
-        stroke="#888"
-        strokeWidth="1"
+        fill="#CCCCFF" // 더 밝고 강한 색상
+        stroke="black" // 더 두껍고 뚜렷한 테두리
+        strokeWidth="2"
       />
 
       {/* 무게중심 위치 표시 */}
       {z !== undefined && (
         <>
-          {/* 무게중심 위치에 원 표시 */}
-          <circle
-            cx={leftEllipseCx + z}
-            cy={commonCy}
-            r={Math.max(8, Math.min(rLeftY, rRightY) / 5)}
+          {/* 무게중심 위치에 사각형 표시 (원 대신 사각형 사용) */}
+          <rect
+            x={leftEllipseCx + z - 10}
+            y={commonCy - 10}
+            width="20"
+            height="20"
             fill="red"
-            stroke="#333"
-            strokeWidth="1.5"
-            opacity="0.8"
+            stroke="black"
+            strokeWidth="2"
           />
           {/* 무게중심 수직선 */}
           <line
@@ -93,65 +93,65 @@ export const TruncatedCone: React.FC<TruncatedConeProps> = ({
             x2={leftEllipseCx + z}
             y2={commonCy + maxRY + 5}
             stroke="red"
-            strokeWidth="1.5"
-            strokeDasharray="4 2"
-            opacity="0.7"
+            strokeWidth="3" // 더 두껍게
+            strokeDasharray="5 5" // 더 큰 대시
           />
           {/* 무게중심 위치 라벨 */}
           <text
             x={leftEllipseCx + z}
-            y={commonCy - maxRY - 10}
+            y={commonCy - maxRY - 15}
             textAnchor="middle"
-            fill="#333"
+            fill="blue" // 파란색으로 변경
             fontWeight="bold"
-            fontSize="12"
+            fontSize="16" // 더 큰 글씨
+            textDecoration="underline" // 밑줄 추가
           >
-            현재 무게중심
+            무게중심
           </text>
         </>
       )}
 
-      {/* 'L' Text on Left Ellipse */}
+      {/* 'L' 텍스트 */}
       <text
         x={leftEllipseCx}
         y={commonCy}
         textAnchor="middle"
         dominantBaseline="central"
-        fill="#333"
+        fill="blue" // 색상 변경
         fontWeight="bold"
-        fontSize={Math.max(rLeftY / 3, 12)} // 적절한 크기의 폰트 크기 (최소 12px)
+        fontSize={Math.max(rLeftY / 2, 16)} // 더 큰 폰트 크기
       >
         L
       </text>
-      {/* 'R' Text on Right Ellipse */}
+      {/* 'R' 텍스트 */}
       <text
         x={rightEllipseCx}
         y={commonCy}
         textAnchor="middle"
         dominantBaseline="central"
-        fill="#333"
+        fill="blue" // 색상 변경
         fontWeight="bold"
-        fontSize={Math.max(rRightY / 3, 12)} // 적절한 크기의 폰트 크기 (최소 12px)
+        fontSize={Math.max(rRightY / 2, 16)} // 더 큰 폰트 크기
       >
         R
       </text>
-      {/* Top connecting line */}
+      {/* 위쪽 연결선 */}
       <line
-        x1={leftEllipseCx} // Center X of left ellipse
-        y1={commonCy - rLeftY} // Top edge of left ellipse
-        x2={rightEllipseCx} // Center X of right ellipse
-        y2={commonCy - rRightY} // Top edge of right ellipse
-        stroke="#888"
-        strokeWidth="1"
+        x1={leftEllipseCx}
+        y1={commonCy - rLeftY}
+        x2={rightEllipseCx}
+        y2={commonCy - rRightY}
+        stroke="black" // 검정색으로 변경
+        strokeWidth="3" // 더 두껍게
       />
-      {/* Bottom connecting line */}
+      {/* 아래쪽 연결선 */}
       <line
-        x1={leftEllipseCx} // Center X of left ellipse
-        y1={commonCy + rLeftY} // Bottom edge of left ellipse
-        x2={rightEllipseCx} // Center X of right ellipse
-        y2={commonCy + rRightY} // Bottom edge of right ellipse
-        stroke="#888"
-        strokeWidth="1"
+        x1={leftEllipseCx}
+        y1={commonCy + rLeftY}
+        x2={rightEllipseCx}
+        y2={commonCy + rRightY}
+        stroke="black" // 검정색으로 변경
+        strokeWidth="3" // 더 두껍게
       />
     </svg>
   );
